@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Started</title>
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: linear-gradient(to bottom, #00008B, #87CEFA);
+color: white;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+position: relative;
+}
+.copy-link {
+position: absolute;
+top: 20px;
+right: 20px;
+background-color: #004080;
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+.copy-link:hover {
+background-color: #002060;
+}
+.container {
+background-color: rgba(0, 0, 0, 0.6);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+width: 80%;
+max-width: 400px;
+}
+h1 {
+margin-bottom: 20px;
+}
+p {
+margin: 10px 0;
+}
+.btn {
+padding: 10px 20px;
+margin: 10px 0;
+border: none;
+border-radius: 5px;
+background-color: #004080;
+color: white;
+font-size: 16px;
+cursor: pointer;
+width: 100%;
+}
+.btn:hover {
+background-color: #002060;
+}
+</style>
+</head>
+<body>
+<button class="copy-link" onclick="copyLink()">Copy Link</button>
+<div class="container">
+<h1>Welcome to Our Platform!</h1>
+<p>To get started, please choose one of the following options:</p>
+<a href="file:///storage/emulated/0/Android/data/com.codeliber.html/files/user_files/temporary_output.html">
+<button class="btn">Log In</button>
+</a>
+<a href="signup.html">
+<button class="btn">Sign Up</button>
+</a>
+</div>
+<script>
+function copyLink() {
+const url = window.location.href;
+navigator.clipboard.writeText(url).then(() => {
+alert('Link copied to clipboard!');
+}).catch(err => {
+console.error('Failed to copy: ', err);
+});
+}
+</script>
+</body>
+</html>
